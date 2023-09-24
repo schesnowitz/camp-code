@@ -10,3 +10,10 @@ def about(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+def chat(request):
+    if request.method == "POST":
+        chat_input = request.POST.get('chat-input')
+        print(chat_input)
+
+        return render(request, "chat.html", context={"chat_data" : chat_input})
