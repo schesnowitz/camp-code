@@ -10,9 +10,10 @@
 
     <form action="" method="post">
         {% csrf_token %}
-        <input type="text" name="chat-input"/>
+        <input type="text" name="human-input"/>
         <button type"submit">Submit</button>
     </form>
-    <p>{{ chat_data }}</p>
+    <p>{{ human_input }}</p>
+    <p>{{ ai_response }}</p>
 </body>
 </html>
